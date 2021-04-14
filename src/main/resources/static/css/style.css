@@ -49,6 +49,7 @@ body {
     position: absolute;
     left: -100px;
     top: -100px;
+    object-fit: cover;
     width: 200px;
     height: 200px;
     border-radius: 50%;

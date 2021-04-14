@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kartička zákazníka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+<div class="container">
+    <div class="person-info">
+        <div class="photo-border"></div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/220px-Brad_Pitt_2019_by_Glenn_Francis.jpg" class="photo" alt="profilové foto"/>
+        <div class="row">
+            <span class="label">Jméno</span>
+            <span class="value" th:text="${firstName}">First name</span>
+        </div>
+        <div class="row">
+            <span class="label">Příjmení</span>
+            <span class="value" th:text="${lastName}">Last name</span>
+        </div>
+        <div class="row">
+            <span class="label">Datum narození</span>
+            <span class="value" th:text="${dateOfBirth}">Date of birth</span>
+        </div>
+        <div class="row">
+            <span class="label">Věk</span>
+            <span class="value" th:text="${age}">Age</span>
+        </div>
+    </div>
+    <div class="address">
+        <div class="address-line" th:text="${street}">Street</div>
+        <div class="address-line"><span th:text="${zipCode}">Zip</span> <span th:text="${city}">City</span></div>
+    </div>
+</div>
+</body>
+</html>
