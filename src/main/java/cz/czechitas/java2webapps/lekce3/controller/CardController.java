@@ -24,13 +24,8 @@ public class CardController {
     @GetMapping("/")
     public ModelAndView card(){
         ModelAndView result = new ModelAndView("card");
-        result.addObject("firstName", PERSON.getFirstName());
-        result.addObject("lastName", PERSON.getLastName());
-        result.addObject("dateOfBirth", PERSON.getDateOfBirth());
-        result.addObject("age", PERSON.getAge());
-        result.addObject("street", ADDRESS.getStreetWithNumber());
-        result.addObject("zipCode", ADDRESS.getZipCode());
-        result.addObject("city", ADDRESS.getCity());
+        result.addObject("person", PERSON);
+        result.addObject("address", ADDRESS);
 
         return result;
     }

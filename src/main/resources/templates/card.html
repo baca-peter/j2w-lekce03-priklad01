@@ -16,24 +16,24 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/220px-Brad_Pitt_2019_by_Glenn_Francis.jpg" class="photo" alt="profilové foto"/>
         <div class="row">
             <span class="label">Jméno</span>
-            <span class="value" th:text="${firstName}">First name</span>
+            <span class="value" th:text="${person.firstName}">First name</span>
         </div>
         <div class="row">
             <span class="label">Příjmení</span>
-            <span class="value" th:text="${lastName}">Last name</span>
+            <span class="value" th:text="${person.lastName}">Last name</span>
         </div>
         <div class="row">
             <span class="label">Datum narození</span>
-            <span class="value" th:text="${dateOfBirth}">Date of birth</span>
+            <span class="value" th:text="${person.dateOfBirth}">Date of birth</span>
         </div>
         <div class="row">
             <span class="label">Věk</span>
-            <span class="value" th:text="${age}">Age</span>
+            <span class="value" th:text="${person.age}">Age</span>
         </div>
     </div>
     <div class="address">
-        <div class="address-line" th:text="${street}">Street</div>
-        <div class="address-line"><span th:text="${zipCode}">Zip</span> <span th:text="${city}">City</span></div>
+        <div class="address-line" th:text="${address.streetWithNumber}">Street</div>
+        <div class="address-line"><span th:text="${address.zipCode}">Zip</span> <span th:text="${address.city}">City</span></div>
     </div>
 </div>
 </body>
